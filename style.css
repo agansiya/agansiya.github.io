@@ -1,0 +1,120 @@
+/* style.css - One Page Modern Portfolio for Agansiya */
+
+:root{
+  --bg:#f7f7f8;
+  --accent:#111827;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Header / Hero */
+header{
+  background:linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+  color:#fff;
+  padding:56px 20px;
+  text-align:center;
+}
+header .name{
+  margin:0;
+  font-size:36px;
+  letter-spacing:0.6px;
+  font-weight:700;
+}
+header .role{
+  margin:8px 0 0;
+  font-size:16px;
+  color:rgba(255,255,255,0.85);
+}
+
+/* Container */
+.container{
+  max-width:980px;
+  margin: -36px auto 40px;
+  padding:20px;
+}
+
+/* Card style sections */
+.section{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow: 0 6px 24px rgba(16,24,40,0.06);
+  margin-bottom:20px;
+}
+
+/* Headings */
+.section h2{
+  margin:0 0 14px;
+  font-size:20px;
+  color:var(--accent);
+  display:inline-block;
+  padding-left:10px;
+  border-left:4px solid #111827;
+}
+
+/* About */
+#about p{margin:0;color:var(--muted)}
+
+/* Skills */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+.skill{
+  padding:8px 14px;
+  border-radius:999px;
+  background:#111827;
+  color:#fff;
+  font-size:13px;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.06);
+}
+
+/* Projects grid */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+.project{
+  padding:16px;
+  border-radius:10px;
+  background:linear-gradient(180deg,#ffffff,#fbfbfd);
+  border:1px solid rgba(16,24,40,0.03);
+}
+.project h3{margin:0 0 6px;font-size:16px}
+.project p{margin:0;color:var(--muted);font-size:14px}
+
+/* Contact */
+.contact-list{display:flex;flex-direction:column;gap:6px}
+.contact-list b{color:var(--accent)}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* Responsive */
+@media (max-width:600px){
+  header{padding:40px 16px}
+  header .name{font-size:28px}
+  .container{margin-top:-20px;padding:12px}
+}
